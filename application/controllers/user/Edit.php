@@ -17,15 +17,24 @@ class Edit extends CI_Controller {
 		/* echo $id; */
 	}
 	
-	public function save()
+	public function update($id)
 	{
 		$fullName = $this->input->post("fullName");
 		$email = $this->input->post("email");
 		$password = $this->input->post("password");
 		$repeatPassword = $this->input->post("repeatPassword");
 		
+		$data = $this->User_model->getUser($id);
+		
+		$validateEmail = "";
+		
+		if ($email != $data->email) {
+			# code...
+			$validateEmail = "|is_unique[user.email]";
+		}
+		
 		$this->form_validation->set_rules('fullName', 'Nombre completo', 'required|min_length[3]');
-		$this->form_validation->set_rules('email', 'Correo electronico', 'required|valid_email|is_unique[user.email]');
+		$this->form_validation->set_rules('email', 'Correo electronico', 'required|valid_email'.$validateEmail);
 		$this->form_validation->set_rules('password', 'Password', 'required|min_length[4]');
 		$this->form_validation->set_rules('repeatPassword', 'Confirma contraseña', 'required|matches[password]');
 
@@ -33,7 +42,8 @@ class Edit extends CI_Controller {
 		if ($this->form_validation->run() == FALSE)
         {
             /* echo form_error('fullName'); */
-            $this->load->view('user/add');
+            /* $this->load->view('user/edit', $data); */
+            $this->index($id);
         }
         else
         {
@@ -41,11 +51,12 @@ class Edit extends CI_Controller {
 			$data = array(
 				"full_name" => $fullName,
 				"email" => $email,
-				"password" => md5($password)
+				"password" => md5($password),
+				"modified_at" => date("Y-m-d h:m:s")
 			);
 			
-			$this->User_model->save($data);
-			$this->session->set_flashdata('success', 'Se guardo los datos correctamente');
+			$this->User_model->update($data, $id);
+			$this->session->set_flashdata('success', 'Los datos se actualizaron correctamente');
 			redirect(base_url()."usuarios");
             
         }

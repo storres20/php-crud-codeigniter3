@@ -16,7 +16,7 @@
 
     <div class="container">
         <h1 class="mt-5">Editar los datos del usuario: <?php echo $full_name; ?> </h1>
-        <form action="<?php echo base_url(); ?>nuevo-usuario/save" class="mt-4" method="POST">
+        <form action="<?php echo base_url(); ?>usuario/update/<?php echo $id; ?>" class="mt-4" method="POST">
             <div class="row">
                 <div class="col-lg-6">
                     <div class="form-group">
