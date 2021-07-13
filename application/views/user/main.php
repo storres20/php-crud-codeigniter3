@@ -31,33 +31,18 @@
                 </tr>
             </thead>
             <tbody>
+                <?php $number=1; foreach($data as $key => $value): ?>
                 <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>mark@gmail.com</td>
+                    <th scope="row"> <?php echo $number++; ?> </th>
+                    <td><?php echo $value->full_name; ?></td>
+                    <td><?php echo $value->email; ?></td>
                     <td>
-                        <a href="" class="btn btn-primary"><ion-icon name="pencil"></ion-icon></a> 
+                        <a href="<?php echo base_url();?>usuario/<?php echo $value->id; ?>" class="btn btn-primary"><ion-icon name="pencil"></ion-icon></a> 
                         <a href="" class="btn btn-danger"><ion-icon name="remove"></ion-icon></a>
                     </td>
                 </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>jacob@gmail.com</td>
-                    <td>
-                        <a href="" class="btn btn-primary"><ion-icon name="pencil"></ion-icon></a> 
-                        <a href="" class="btn btn-danger"><ion-icon name="remove"></ion-icon></a>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>larry@gmail.com</td>
-                    <td>
-                        <a href="" class="btn btn-primary"><ion-icon name="pencil"></ion-icon></a> 
-                        <a href="" class="btn btn-danger"><ion-icon name="remove"></ion-icon></a>
-                    </td>
-                </tr>
+                <?php endforeach; ?>
+                
             </tbody>
         </table>
     </div>

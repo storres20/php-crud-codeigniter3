@@ -8,4 +8,25 @@ class User_model extends CI_Model {
 	    $this->db->query("ALTER TABLE user AUTO_INCREMENT 1");
 	    $this->db->insert("user", $data);
 	}
+	
+	public function getUsers(){
+		$this->db->select("*");
+		$this->db->from("user");
+		$results = $this->db->get();
+		return $results->result();
+	}
+	
+	public function getUser($id){
+		$this->db->select("u.id, u.full_name, u.email");
+		$this->db->from("user u");
+		$this->db->where("u.id", $id);
+		$result = $this->db->get();
+		return $result->row();
+	}
+	
+	public function update($data, $id){
+	
+	    $this->db->where("id", $id);
+	    $this->db->update("user", $data);
+	}
 }
