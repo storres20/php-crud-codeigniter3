@@ -38,7 +38,7 @@
                     <td><?php echo $value->email; ?></td>
                     <td>
                         <a href="<?php echo base_url();?>usuario/<?php echo $value->id; ?>" class="btn btn-primary"><ion-icon name="pencil"></ion-icon></a> 
-                        <a href="" class="btn btn-danger"><ion-icon name="remove"></ion-icon></a>
+                        <a href="<?php echo base_url();?>usuario/delete/<?php echo $value->id; ?>" class="btn btn-danger"><ion-icon name="remove"></ion-icon></a>
                     </td>
                 </tr>
                 <?php endforeach; ?>
