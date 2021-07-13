@@ -29,7 +29,8 @@ class Add extends CI_Controller {
 		
 		if ($this->form_validation->run() == FALSE)
         {
-            echo form_error('fullName');
+            /* echo form_error('fullName'); */
+            $this->load->view('user/add');
         }
         else
         {
@@ -41,6 +42,7 @@ class Add extends CI_Controller {
 			);
 			
 			$this->User_model->save($data);
+			redirect(base_url()."usuarios");
             
         }
 		

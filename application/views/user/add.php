@@ -20,35 +20,35 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Nombre</label>
-                        <input type="text" name="fullName" class="form-control" placeholder="Nombre completo">
+                        <label for="exampleInputEmail1">Nombre completo</label>
+                        <input type="text" name="fullName" class="form-control <?php echo form_error('fullName') ? 'is-invalid':'' ;?>" placeholder="Nombre completo" value="<?php echo set_value('fullName'); ?>">
                         <div class="invalid-feedback">
-                        Please choose a username.
+                        <?php echo form_error('fullName');?>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="exampleInputEmail1">Email</label>
-                        <input type="text" name="email" class="form-control" aria-describedby="emailHelp" placeholder="Correo eléctronico">
+                        <input type="text" name="email" class="form-control <?php echo form_error('email') ? 'is-invalid':'' ;?>" aria-describedby="emailHelp" placeholder="Correo eléctronico" value="<?php echo set_value('email'); ?>">
                         <div class="invalid-feedback">
-                        Please choose a username.
+                        <?php echo form_error('email');?>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="form-group">
                         <label for="exampleInputPassword1">Contraseña</label>
-                        <input type="password" name="password" class="form-control is-invalid"placeholder="Contraseña">
+                        <input type="password" name="password" class="form-control <?php echo form_error('password') ? 'is-invalid':'' ;?>" placeholder="Contraseña" value="<?php echo set_value('password'); ?>">
                         <div class="invalid-feedback">
-                        Please choose a username.
+                        <?php echo form_error('password');?>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="exampleInputPassword1">Repite la contraseña</label>
-                        <input type="password" name="repeatPassword" class="form-control"placeholder="Contraseña">
+                        <input type="password" name="repeatPassword" class="form-control <?php echo form_error('repeatPassword') ? 'is-invalid':'' ;?>" placeholder="Contraseña">
                         <div class="invalid-feedback">
-                        Please choose a username.
+                        <?php echo form_error('repeatPassword');?>
                         </div>
                     </div>
                 </div>
