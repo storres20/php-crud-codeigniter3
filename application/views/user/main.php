@@ -19,7 +19,7 @@
 
         <h1 class="mt-5">Lista de usuarios</h1>
         <div class="text-right">
-        <a href="" class="btn btn-info"><ion-icon name="add"></ion-icon></a> 
+        <a href="<?php echo base_url();?>nuevo-usuario" class="btn btn-info"><ion-icon name="add"></ion-icon></a> 
         </div>
         <table class="table mt-4">
             <thead class="thead-light">

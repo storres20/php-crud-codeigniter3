@@ -16,12 +16,12 @@
 
     <div class="container">
         <h1 class="mt-5">Nuevo usuario</h1>
-        <form class="mt-4">
+        <form action="<?php echo base_url(); ?>nuevo-usuario/save" class="mt-4" method="POST">
             <div class="row">
                 <div class="col-lg-6">
                     <div class="form-group">
                         <label for="exampleInputEmail1">Nombre</label>
-                        <input type="email" class="form-control" placeholder="Nombre completo">
+                        <input type="text" name="fullName" class="form-control" placeholder="Nombre completo">
                         <div class="invalid-feedback">
                         Please choose a username.
                         </div>
@@ -29,7 +29,7 @@
 
                     <div class="form-group">
                         <label for="exampleInputEmail1">Email</label>
-                        <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Correo eléctronico">
+                        <input type="text" name="email" class="form-control" aria-describedby="emailHelp" placeholder="Correo eléctronico">
                         <div class="invalid-feedback">
                         Please choose a username.
                         </div>
@@ -38,7 +38,7 @@
                 <div class="col-lg-6">
                     <div class="form-group">
                         <label for="exampleInputPassword1">Contraseña</label>
-                        <input type="password" class="form-control is-invalid"placeholder="Contraseña">
+                        <input type="password" name="password" class="form-control is-invalid"placeholder="Contraseña">
                         <div class="invalid-feedback">
                         Please choose a username.
                         </div>
@@ -46,7 +46,7 @@
 
                     <div class="form-group">
                         <label for="exampleInputPassword1">Repite la contraseña</label>
-                        <input type="password" class="form-control"placeholder="Contraseña">
+                        <input type="password" name="repeatPassword" class="form-control"placeholder="Contraseña">
                         <div class="invalid-feedback">
                         Please choose a username.
                         </div>
