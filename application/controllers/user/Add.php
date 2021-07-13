@@ -21,13 +21,29 @@ class Add extends CI_Controller {
 		$password = $this->input->post("password");
 		$repeatPassword = $this->input->post("repeatPassword");
 		
-		// los campos del array pertenecen a la Base de Datos
-		$data = array(
-			"full_name" => $fullName,
-			"email" => $email,
-			"password" => md5($password)
-		);
+		$this->form_validation->set_rules('fullName', 'Nombre completo', 'required|min_length[3]');
+		$this->form_validation->set_rules('email', 'Correo electronico', 'required|valid_email|is_unique[user.email]');
+		$this->form_validation->set_rules('password', 'Password', 'required|min_length[4]');
+		$this->form_validation->set_rules('repeatPassword', 'Confirma contraseña', 'required|matches[password]');
+
 		
-		$this->User_model->save($data);
+		if ($this->form_validation->run() == FALSE)
+        {
+            echo form_error('fullName');
+        }
+        else
+        {
+            // los campos del array pertenecen a la Base de Datos
+			$data = array(
+				"full_name" => $fullName,
+				"email" => $email,
+				"password" => md5($password)
+			);
+			
+			$this->User_model->save($data);
+            
+        }
+		
+		
 	}
 }
