@@ -63,5 +63,24 @@
     </div>
 
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    
+    <!-- Sweet Alert 2 - start -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Sweet Alert 2 - end -->
+    
+    <script>
+        console.log("<?php echo $this->session->flashdata("success"); ?>");
+        
+        <?php if($this->session->flashdata("success")): ?>
+        
+            Swal.fire({
+              icon: 'success',
+              title: '<?php echo $this->session->flashdata("success"); ?>',
+              
+            })
+        
+        <?php endif ?>
+        
+    </script>
   </body>
 </html>
