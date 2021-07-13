@@ -8,6 +8,10 @@
 ------ | ------ | ------ |
 HTML | PHP | Mysql |
 Boostrap | | |
-## 🌱 Beta version <ul> <li> <a href="#" target="_blank">Coming soon ...</a> </li> </ul>
+## 🌱 Beta version 
+
+<ul> 
+<li> <a href="#" target="_blank">Coming soon ...</a> </li> 
+</ul>
 
 [comment]: <> ("https://phpcrudmvc.herokuapp.com/")
