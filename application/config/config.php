@@ -23,7 +23,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://cursophp/php_crud_codeigniter3/index.php/';
+/* $config['base_url'] = 'http://cursophp/php_crud_codeigniter3/index.php/'; */
+$config['base_url'] = 'http://cursophp/php_crud_codeigniter3/';
 
 /*
 |--------------------------------------------------------------------------
@@ -36,6 +37,7 @@ $config['base_url'] = 'http://cursophp/php_crud_codeigniter3/index.php/';
 |
 */
 $config['index_page'] = 'index.php';
+/* $config['index_page'] = ''; */
 
 /*
 |--------------------------------------------------------------------------
