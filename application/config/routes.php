@@ -52,5 +52,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'welcome';
 $route['usuarios'] = 'user/Main'; // apunta al Controlador
 $route['nuevo-usuario'] = 'user/Add';
+$route['nuevo-usuario/save'] = 'user/Add/save';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

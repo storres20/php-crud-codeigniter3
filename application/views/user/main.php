@@ -19,7 +19,7 @@
 
         <h1 class="mt-5">Lista de usuarios</h1>
         <div class="text-right">
-        <a href="" class="btn btn-info"><ion-icon name="add"></ion-icon></a> 
+        <a href="<?php echo base_url();?>nuevo-usuario" class="btn btn-info"><ion-icon name="add"></ion-icon></a> 
         </div>
         <table class="table mt-4">
             <thead class="thead-light">
@@ -63,5 +63,24 @@
     </div>
 
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    
+    <!-- Sweet Alert 2 - start -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Sweet Alert 2 - end -->
+    
+    <script>
+        console.log("<?php echo $this->session->flashdata("success"); ?>");
+        
+        <?php if($this->session->flashdata("success")): ?>
+        
+            Swal.fire({
+              icon: 'success',
+              title: '<?php echo $this->session->flashdata("success"); ?>',
+              
+            })
+        
+        <?php endif ?>
+        
+    </script>
   </body>
 </html>
