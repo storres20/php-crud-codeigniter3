@@ -79,8 +79,13 @@
               icon: 'success',
               title: '<?php echo $this->session->flashdata("success"); ?>',
               
-            })
-        
+            });
+            
+            //destroy flash_data
+            if(isset($_SESSION['error'])){
+              unset($_SESSION['error']);
+            }
+
         <?php endif ?>
         
     </script>
