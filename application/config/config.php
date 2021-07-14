@@ -24,7 +24,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 /* $config['base_url'] = 'http://cursophp/php_crud_codeigniter3/index.php/'; */
-$config['base_url'] = 'http://cursophp/php_crud_codeigniter3/';
+/*$config['base_url'] = 'http://cursophp/php_crud_codeigniter3/';*/  // Local URL
+$config['base_url'] = 'https://phpcodeigniter3.herokuapp.com/';  // Remote URL
 
 /*
 |--------------------------------------------------------------------------
