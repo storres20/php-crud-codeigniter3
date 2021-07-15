@@ -1,6 +1,6 @@
 # ⚡CRUD with PHP / MVC / Codeigniter 3 ⚡
 
-> This app web let you Log in, register people and more... Allows CRUD with database. > Using MVC
+> This app web let you register people ... Allows CRUD with database and Codeigniter 3 with MVC
 
 ## 🔭skils:
 
@@ -11,7 +11,7 @@ Boostrap | | |
 ## 🌱 Beta version 
 
 <ul> 
-<li> <a href="#" target="_blank">Coming soon ...</a> </li> 
+<li> <a href="https://phpcodeigniter3.herokuapp.com/" target="_blank">https://phpcodeigniter3.herokuapp.com/</a> </li> 
 </ul>
 
 [comment]: <> ("https://phpcrudmvc.herokuapp.com/")
