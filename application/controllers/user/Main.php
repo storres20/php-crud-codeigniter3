@@ -20,6 +20,6 @@ class Main extends CI_Controller {
 	{
 		$this->User_model->delete($id);
 		$this->session->set_flashdata('success', 'Se elimino al usuario correctamente');
-		redirect(base_url()."usuarios");
+		redirect(base_url()."usuarios",'refresh');
 	}
 }

@@ -57,7 +57,7 @@ class Edit extends CI_Controller {
 			
 			$this->User_model->update($data, $id);
 			$this->session->set_flashdata('success', 'Los datos se actualizaron correctamente');
-			redirect(base_url()."usuarios");
+			redirect(base_url()."usuarios",'refresh');
             
         }
 		

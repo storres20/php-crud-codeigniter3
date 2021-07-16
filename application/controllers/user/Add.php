@@ -43,7 +43,7 @@ class Add extends CI_Controller {
 			
 			$this->User_model->save($data);
 			$this->session->set_flashdata('success', 'Se guardo los datos correctamente');
-			redirect(base_url()."usuarios");
+			redirect(base_url()."usuarios",'refresh');
             
         }
 		
