@@ -82,11 +82,11 @@
             });
             
             //destroy flash_data
-            <?php if(isset($_SESSION['error'])): ?>
-              
-              unset($_SESSION['error']);
+            <?php if(isset($_SESSION["success"])){
             
-            <?php endif ?>
+                unset($_SESSION["success"]);
+            }
+            ?>
 
         <?php endif ?>
         
